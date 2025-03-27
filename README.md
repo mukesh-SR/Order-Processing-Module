@@ -1,11 +1,11 @@
 # Order-Processing-Module
-Vendor_CustomOrderProcessing Module for Magento 2
+#**Vendor_CustomOrderProcessing Module for Magento 2**
 
-Overview
+**Overview**
 
 The Vendor_CustomOrderProcessing module provides a REST API to update order status using authentication. It also logs order status changes and sends an email notification when an order is marked as shipped.
 
-Features
+**Features**
 
 REST API to update order status based on order increment ID.
 
@@ -17,7 +17,7 @@ Sends an email notification when an order is marked as shipped.
 
 Includes Unit and Integration Tests with test coverage verification.
 
-Installation
+**Installation**
 
 Navigate to Magento root directory:
 
@@ -31,7 +31,7 @@ php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento cache:flush
 
-API Usage
+**API Usage**
 
 Update Order Status API
 
@@ -39,14 +39,14 @@ Endpoint:
 
 POST /rest/V1/customorderprocessing/update
 
-Request Body:
+_Request Body:_
 
 {
     "increment_id": "100000001",
     "status": "complete"
 }
 
-Response:
+_Response:_
 
 {
     "message": "Order status updated successfully."
@@ -66,7 +66,7 @@ new_status
 
 changed_at (timestamp)
 
-Email Notification:
+**Email Notification:**
 
 Triggered when an order is marked as shipped (complete status).
 
@@ -74,7 +74,7 @@ Uses Magento's `` class to send the default order email.
 
 Testing & Coverage
 
-Run Unit Tests:
+**Run Unit Tests:**
 
 php vendor/bin/phpunit app/code/Vendor/CustomOrderProcessing/Test/Unit/
 
@@ -82,13 +82,13 @@ Run Integration Tests:
 
 php bin/magento dev:tests:run integration
 
-Generate Test Coverage Report:
+**Generate Test Coverage Report:**
 
 cd dev/tests/integration
 php ../../../vendor/bin/phpunit --coverage-html ../../../var/coverage/ ../../../app/code/Vendor/CustomOrderProcessing/
 
 Open var/coverage/index.html in a browser to view the report.
 
-License
+**License**
 
 This module is open-source and can be modified as needed.
